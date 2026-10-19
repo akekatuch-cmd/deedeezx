@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ติดต่อเรา - เอกทัศน์ คุ้นเคย</title>
+    <!-- Google Fonts: Kanit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <span class="logo">EAKATHAT.K</span>
+            <nav>
+                <a href="index.html" class="nav-link">หน้าแรก</a>
+                <a href="contact.html" class="nav-link active">ติดต่อเรา</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card form-card">
+            <h2 class="section-title">แบบฟอร์มการติดต่อ</h2>
+            <p class="form-subtext">หากมีข้อสงสัยหรือต้องการติดต่อสอบถาม สามารถส่งข้อความผ่านแบบฟอร์มด้านล่างนี้ได้เลยครับ</p>
+            
+            <form action="#" method="post" class="contact-form">
+                <div class="form-group">
+                    <label for="name">ชื่อ - นามสกุล</label>
+                    <input type="text" id="name" name="name" required placeholder="กรอกชื่อ-นามสกุลของคุณ">
+                </div>
+                <div class="form-group">
+                    <label for="email">อีเมลติดต่อ</label>
+                    <input type="email" id="email" name="email" required placeholder="example@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">ข้อความ</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="พิมพ์ข้อความที่ต้องการติดต่อ..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">ส่งข้อความ</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 เอกทัศน์ คุ้นเคย | <a href="https://github.com/YOUR_USERNAME" target="_blank">GitHub Profile</a> | <a href="index.html">กลับหน้าแรก</a></p>
+    </footer>
+
+</body>
+</html>

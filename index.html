@@ -3,47 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile</title>
+    <title>เอกทัศน์ คุ้นเคย - Profile</title>
+    <!-- Google Fonts: Kanit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <h1>ข้อมูลประวัติส่วนตัว</h1>
-    <ul>
-        <li><strong>ชื่อ-นามสกุล:</strong> เอกทัศน์ คุ้นเคย</li>
-        <li><strong>ชื่อเล่น:</strong> ดีดี</li>
-        <li><strong>สาขาวิชา:</strong> วิศวกรรมศาสตร์และเทคโนโลยี</li>
-        <li><strong>กลุ่มเรียน (Section):</strong> 1.2.1</li>
-    </ul>
+    <header class="navbar">
+        <div class="nav-container">
+            <span class="logo">EAKATHAT.K</span>
+            <nav>
+                <a href="index.html" class="nav-link active">หน้าแรก</a>
+                <a href="contact.html" class="nav-link">ติดต่อเรา</a>
+            </nav>
+        </div>
+    </header>
 
-    <h2>รูปโปรไฟล์</h2>
-    <img src="https://i.pinimg.com/236x/1e/31/fb/1e31fb03efb4e0d96db50d9358ba01be.jpg" alt="Profile Picture" width="300">
+    <main class="container">
+        <!-- Layout โปรไฟล์ด้วย Table (สไลด์หน้า 59) -->
+        <section class="card">
+            <table class="profile-layout-table">
+                <tr>
+                    <td class="profile-img-td">
+                        <img src="profile.jpg" alt="รูปโปรไฟล์" class="profile-img">
+                    </td>
+                    <td class="profile-info-td">
+                        <h1>เอกทัศน์ คุ้นเคย</h1>
+                        <p class="role-tag">นักศึกษาวิศวกรรมศาสตร์</p>
+                        <p class="bio-detail"><strong>สาขาวิชา:</strong> วิศวกรรมคอมพิวเตอร์และเทคโนโลยี</p>
+                        <p class="bio-detail"><strong>สถาบัน:</strong> สถาบันการจัดการปัญญาภิวัฒน์</p>
+                    </td>
+                </tr>
+            </table>
+        </section>
 
-    <h2>เหตุผลที่อยากเรียน Full stack web development</h2>
-    <p>
-        อยากมีสกิลที่ครอบคลุมครับ เพราะการทำได้ทั้งระบบหน้าบ้านและหลังบ้าน จะทำให้เราเข้าใจภาพรวมของระบบทั้งหมดเหมือนเห็นแผนที่ในเกม ทำให้แก้ปัญหาได้ตรงจุด ทำงานยืดหยุ่น และมีโอกาสอัปเลเวลเติบโตในสายอาชีพอย่าง Tech Lead ได้ไวขึ้น
+        <!-- About Me -->
+        <section class="card">
+            <h2 class="section-title">เกี่ยวกับฉัน</h2>
+            <p class="text-content">
+                สวัสดีครับ ผมกำลังศึกษาสาขาวิชาวิศวกรรมศาสตร์และเทคโนโลยี มีความสนใจด้านการพัฒนาเว็บไซต์ ภาษาโปรแกรม และการจัดการระบบฐานข้อมูล มุ่งมั่นเรียนรู้เทคโนโลยีใหม่ๆ และพัฒนาทักษะตนเองอยู่เสมอ
+            </p>
+        </section>
 
-    <h2>ความคาดหวังต่อวิชานี้</h2>
-    <p>
-        คาดหวังว่าจะได้ลงมือปฏิบัติจริงกับ Framework และ Tools สมัยใหม่ที่บริษัท Tech ส่วนใหญ่เลือกใช้ครับ อยากรู้เทคนิคที่ช่วยให้การพัฒนาเว็บไซต์รวดเร็วและมีประสิทธิภาพมากขึ้น เพื่อเตรียมความพร้อมให้ตัวเองก่อนออกไปลุยงานจริง
-    </p>
+        <!-- Experience (ตารางประสบการณ์ตามสไลด์) -->
+        <section class="card">
+            <h2 class="section-title">ประสบการณ์การทำงาน</h2>
+            <table class="custom-table">
+                <thead>
+                    <tr>
+                        <th style="width: 35%;">ปีที่ทำงาน (Year)</th>
+                        <th>สถานที่ทำงาน / สถาบัน (Work Place)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="year-col">2022 - 2024</td>
+                        <td>CP ALL (7-Eleven)</td>
+                    </tr>
+                    <tr>
+                        <td class="year-col">2025 - ปัจจุบัน</td>
+                        <td>สถาบันการจัดการปัญญาภิวัฒน์</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-    <h2>จุดอ่อนที่ตนเองต้องพัฒนาเกี่ยวกับทักษะ Programming และ แนวทางการพัฒนา</h2>
-    <p>
-        <strong>จุดอ่อน:</strong> เอาจริงๆ คือแทบจะไม่มีพื้นฐานเลยครับ เรียกได้ว่าเริ่มจากศูนย์ เวลาเจอ Error จะแพนิกและงงมาก ไม่รู้ว่าจะต้องเริ่มแก้ปัญหาจากจุดไหนก่อน
-        <br><br>
-        <strong>แนวทางการพัฒนา:</strong> ต้องพยายามฝึกเขียนบ่อยๆ ให้ชินมือครับ เวลาไม่เข้าใจตรงไหนก็จะพยายามหาข้อมูล หรือเดินไปถามเพื่อนกับอาจารย์ให้เคลียร์ไปเลย จะได้ตามเนื้อหาทัน
-    </p>
+        <!-- Favorite Foods (ol / ul) -->
+        <section class="card">
+            <h2 class="section-title">สิ่งที่ชอบทาน 3 อย่าง</h2>
+            <ol class="fav-food-list">
+                <li>อกไก่ต้ม / อกไก่แช่แข็ง</li>
+                <li>ไข่ต้ม</li>
+                <li>สลัดผักสด</li>
+            </ol>
+        </section>
 
-    <h2>Website ที่ชื่นชอบ หรือ ได้รับแรงบันดาลใจ</h2>
-    <p>
-        <a href="https://www.riotgames.com/" target="_blank">Riot Games Official Website</a> 
-        <br>
-        (เหตุผล: ปกติใช้เวลาว่างไปกับการเล่นเกมหลายๆ แพลตฟอร์ม พอเข้ามาใช้เว็บนี้แล้วรู้สึกว่าเขาออกแบบระบบมาเพื่อคอมมูนิตี้คนเล่นเกมจริงๆ ทั้งแอนิเมชันที่ลื่นไหลและการจัดวางเนื้อหาที่ดูล้ำสมัย เลยอยากเอามาเป็นไอเดียในการสร้างเว็บของตัวเองให้คนเข้าใช้งานรู้สึกสนุกไปด้วย)
-    </p>
+        <!-- Skills & Power Level (Table 4 Column ตามสไลด์หน้า 60) -->
+        <section class="card">
+            <h2 class="section-title">ทักษะและความสามารถ (Skills)</h2>
+            <table class="skills-grid-table">
+                <tbody>
+                    <tr>
+                        <td class="skill-name">Java Programming</td>
+                        <td class="stars">★★★☆☆</td>
+                        <td class="skill-name">English</td>
+                        <td class="stars">★★☆☆☆</td>
+                    </tr>
+                    <tr>
+                        <td class="skill-name">SQL / Database</td>
+                        <td class="stars">★★★☆☆</td>
+                        <td class="skill-name">HTML / CSS</td>
+                        <td class="stars">★★★☆☆</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
 
-    <h2>รูปภาพที่น่าสนใจ</h2>
-    <img src="https://res.klook.com/image/upload/q_85/c_fill,w_750/v1676628452/blog/otddawrc8xqgih9uw7n0.jpg" alt="Japan Scenery with Red Pagoda" width="500">
-    <p><em>เจดีย์ห้าชั้นสีแดง: โดดเด่นอยู่ทางด้านขวาของภาพ สะท้อนถึงสถาปัตยกรรมและวัฒนธรรมญี่ปุ่นแบบดั้งเดิม</em></p>
+    <footer class="footer">
+        <p>© 2026 เอกทัศน์ คุ้นเคย | <a href="https://github.com/YOUR_USERNAME" target="_blank">GitHub Profile</a> | <a href="contact.html">Contact Me</a></p>
+    </footer>
 
 </body>
 </html>
