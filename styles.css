@@ -1,12 +1,10 @@
 :root {
-    --bg-main: #fcf9f5;          /* สีครีมอุ่น นุ่มสายตา */
+    --bg-main: #f8f5f0;          /* สีครีมอุ่น นุ่มสายตา */
     --card-bg: #ffffff;          /* สีขาวสะอาด */
-    --text-primary: #3d352e;     /* สีเทาน้ำตาลเข้ม */
-    --text-muted: #786c62;       /* สีน้ำตาลเทาอ่อน */
-    --accent-warm: #a66e4e;      /* สีอิฐอบอุ่น */
-    --accent-hover: #8b573a;     /* สีตอนชี้ปุ่ม */
-    --border-color: #eee7e0;     /* สีเส้นขอบนุ่มๆ */
-    --star-color: #d99b26;       /* สีดาวทองอบอุ่น */
+    --text-primary: #3b332c;     /* สีเทาน้ำตาลเข้ม */
+    --text-muted: #73675c;       /* สีน้ำตาลเทาอ่อน */
+    --accent-color: #8c5a3c;     /* สีน้ำตาลไม้อบอุ่น */
+    --border-color: #ebdcd0;     /* เส้นขอบนุ่มๆ */
 }
 
 * {
@@ -23,52 +21,46 @@ body {
     font-weight: 300;
 }
 
+.header-hero {
+    background-color: #e3d7c9;
+    padding: 50px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.hero-inner {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.site-tag {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+.header-hero h1 {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    margin: 8px 0;
+}
+
+.header-hero p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
 .container {
     width: 90%;
     max-width: 800px;
     margin: 35px auto;
 }
 
-/* Navbar */
-.navbar {
-    background-color: var(--card-bg);
-    border-bottom: 1px solid var(--border-color);
-    padding: 16px 0;
-}
-
-.nav-container {
-    width: 90%;
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: var(--accent-warm);
-    font-size: 1.1rem;
-}
-
-.nav-link {
-    color: var(--text-muted);
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 0.95rem;
-    transition: color 0.2s ease;
-}
-
-.nav-link:hover, .nav-link.active {
-    color: var(--accent-warm);
-    font-weight: 400;
-}
-
-/* Card Section */
 .card {
     background: var(--card-bg);
-    padding: 30px;
+    padding: 28px;
     border-radius: 12px;
     margin-bottom: 24px;
     border: 1px solid var(--border-color);
@@ -76,8 +68,8 @@ body {
 }
 
 .section-title {
-    font-size: 1.25rem;
-    color: var(--accent-warm);
+    font-size: 1.2rem;
+    color: var(--accent-color);
     font-weight: 500;
     margin-bottom: 16px;
     padding-bottom: 8px;
@@ -85,166 +77,50 @@ body {
 }
 
 .text-content {
-    color: var(--text-primary);
-    font-size: 1rem;
-}
-
-/* Profile Section (Table Layout Challenge) */
-.profile-layout-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-/* คำตอบส่วน Challenge: ใช้ padding-right เว้นระยะห่างรูปโปรไฟล์กับข้อความ */
-.profile-img-td {
-    width: 130px;
-    vertical-align: middle;
-    padding-right: 28px;
-}
-
-.profile-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid var(--border-color);
-}
-
-.profile-info-td h1 {
-    font-size: 1.6rem;
-    font-weight: 500;
-    color: var(--text-primary);
-    margin-bottom: 2px;
-}
-
-.role-tag {
-    color: var(--accent-warm);
     font-size: 0.95rem;
-    margin-bottom: 12px;
 }
 
-.bio-detail {
-    font-size: 0.95rem;
-    color: var(--text-muted);
-    margin-bottom: 4px;
-}
-
-.bio-detail strong {
-    color: var(--text-primary);
-    font-weight: 400;
-}
-
-/* Experience Table */
-.custom-table {
-    width: 100%;
-    border-collapse: collapse;
+/* Character Grid */
+.char-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 16px;
     margin-top: 10px;
 }
 
-.custom-table th, .custom-table td {
+.char-box {
+    background-color: var(--bg-main);
+    padding: 18px;
+    border-radius: 8px;
     border: 1px solid var(--border-color);
-    padding: 12px 16px;
-    text-align: left;
-    font-size: 0.95rem;
 }
 
-.custom-table th {
-    background-color: var(--bg-main);
+.char-box h3 {
+    font-size: 1.05rem;
     color: var(--text-primary);
     font-weight: 500;
 }
 
-.year-col {
-    color: var(--text-muted);
-}
-
-/* Favorite Foods List */
-.fav-food-list {
-    padding-left: 20px;
-    color: var(--text-primary);
-}
-
-.fav-food-list li {
+.series-tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: var(--accent-color);
     margin-bottom: 8px;
 }
 
-/* Skills Table 4 Columns */
-.skills-grid-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.skills-grid-table td {
-    padding: 10px 8px;
-    border: none;
-    vertical-align: middle;
-}
-
-.skills-grid-table .skill-name {
-    font-size: 0.95rem;
-    color: var(--text-primary);
-    width: 30%;
-}
-
-.skills-grid-table .stars {
-    color: var(--star-color);
-    font-size: 1rem;
-    letter-spacing: 2px;
-    width: 20%;
-}
-
-/* Form Styles */
-.form-subtext {
-    font-size: 0.95rem;
+.char-box p {
+    font-size: 0.9rem;
     color: var(--text-muted);
-    margin-bottom: 20px;
 }
 
-.form-group {
-    margin-bottom: 18px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 6px;
+/* Game List */
+.game-list {
+    padding-left: 20px;
     font-size: 0.95rem;
-    color: var(--text-primary);
 }
 
-.form-group input, 
-.form-group textarea {
-    width: 100%;
-    padding: 12px 14px;
-    border: 1px solid var(--border-color);
-    background-color: var(--bg-main);
-    color: var(--text-primary);
-    border-radius: 8px;
-    font-family: 'Kanit', sans-serif;
-    font-size: 0.95rem;
-    outline: none;
-    transition: border-color 0.2s ease;
-}
-
-.form-group input:focus, 
-.form-group textarea:focus {
-    border-color: var(--accent-warm);
-    background-color: #ffffff;
-}
-
-.submit-btn {
-    background-color: var(--accent-warm);
-    color: #ffffff;
-    border: none;
-    padding: 10px 24px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-family: 'Kanit', sans-serif;
-    font-size: 0.95rem;
-    transition: background 0.2s ease;
-}
-
-.submit-btn:hover {
-    background-color: var(--accent-hover);
+.game-list li {
+    margin-bottom: 10px;
 }
 
 /* Footer */
@@ -252,17 +128,8 @@ body {
     text-align: center;
     padding: 24px;
     color: var(--text-muted);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     border-top: 1px solid var(--border-color);
     background-color: var(--card-bg);
     margin-top: 40px;
-}
-
-.footer a {
-    color: var(--accent-warm);
-    text-decoration: none;
-}
-
-.footer a:hover {
-    text-decoration: underline;
 }
